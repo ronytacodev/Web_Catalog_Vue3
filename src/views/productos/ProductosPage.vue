@@ -1,7 +1,7 @@
 <template>
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
-            <h1 class="title">Lista de Productos</h1>
+            <h1 class="cell title">Lista de Productos</h1>
             <productos-populares />
         </div>
     </div>
@@ -18,4 +18,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.title {
+    font-family: $ff-1;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 3px solid $color-1;
+}
+</style>

@@ -4,7 +4,7 @@
         crossorigin="anonymous">
     <div class="cell grid-x grid-margin-x">
         <div class="cell small-6 medium-4 large-3" v-for="n in 12" :key="n">
-            <v-card-producto />
+            <v-card-producto image="" name="" :price="0" />
         </div>
     </div>
 </template>
