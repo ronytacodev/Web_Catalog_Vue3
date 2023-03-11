@@ -107,12 +107,12 @@ select {
     text-transform: none
 }
 
-[type=button],
-[type=reset],
-[type=submit],
-button {
-    -webkit-appearance: button
-}
+// [type=button],
+// [type=reset],
+// [type=submit],
+// button {
+//     -webkit-appearance: button
+// }
 
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -163,19 +163,19 @@ textarea {
     height: auto
 }
 
-[type=search] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px
-}
+// [type=search] {
+//     -webkit-appearance: textfield;
+//     outline-offset: -2px
+// }
 
-[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
-}
+// [type=search]::-webkit-search-decoration {
+//     -webkit-appearance: none
+// }
 
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit
-}
+// ::-webkit-file-upload-button {
+//     -webkit-appearance: button;
+//     font: inherit
+// }
 
 details {
     display: block
@@ -206,7 +206,7 @@ template {
 
 [draggable=false] {
     -webkit-touch-callout: none;
-    -webkit-user-select: none
+    // -webkit-user-select: none
 }
 
 .foundation-mq {
@@ -4104,7 +4104,7 @@ screen and (min-width:64em) {
     transition: background-color .25s ease-out, color .25s ease-out;
     font-family: inherit;
     font-size: .9rem;
-    -webkit-appearance: none;
+    // -webkit-appearance: none;
     line-height: 1;
     text-align: center;
     cursor: pointer
@@ -4470,7 +4470,7 @@ screen and (min-width:64em) {
     position: relative;
     top: .4em;
     display: inline-block;
-    float: right;
+    // float: right;
     margin-left: 1em
 }
 
@@ -4551,8 +4551,8 @@ textarea {
     transition: border-color .25s ease-in-out, -webkit-box-shadow .5s;
     transition: box-shadow .5s, border-color .25s ease-in-out;
     transition: box-shadow .5s, border-color .25s ease-in-out, -webkit-box-shadow .5s;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
     appearance: none
 }
 
@@ -6436,7 +6436,7 @@ screen and (min-width:64em) {
     border-left-width: 0;
     border-color: transparent #1779ba transparent transparent;
     display: inline-block;
-    vertical-align: middle;
+    // vertical-align: middle;
     margin-right: .75rem
 }
 
