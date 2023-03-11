@@ -2,7 +2,7 @@
     <div class="banner">
         <img class="banner__img" src="@/assets/background.jpg">
 
-        <h1 class="banner__title">Bienvenido al Minimarket TacoMass</h1>
+        <h1 class="banner__title">Bienvenido al Minimarket <span class="banner__title__span">Ahorra Ya</span></h1>
         <div class="banner__copy">
             <p class="banner__copy__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos esse
                 nesciunt perferendis molestiae quibusdam qui, delectus commodi error ullam veritatis ut obcaecati
@@ -44,9 +44,24 @@ export default {
 
     &__title {
         font-family: $ff-1;
-        color: $color-1;
+        color: $color-2;
         font-size: 26px;
         margin-top: 10px;
+
+        @include desde ($medium) {
+            margin-top: 30px;
+        }
+
+        &__span {
+            font-family: $ff-4;
+            padding: 10px 20px;
+            color: $color-1;
+
+            @include desde ($medium) {
+                display: block;
+                margin-top: 10px;
+            }
+        }
     }
 
     &__copy {
