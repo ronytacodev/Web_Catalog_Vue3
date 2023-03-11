@@ -19,12 +19,27 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-    border: 1px solid;
     text-align: center;
 
     &__img {
         width: 100%;
         height: 200px;
+
+        @include desde_hasta ($small, $medium) {
+            height: 350px;
+        }
+
+        @include desde_hasta ($medium, $large) {
+            height: 400px;
+        }
+
+        @include desde_hasta ($large, $extra-large) {
+            height: 500px;
+        }
+
+        @include desde ($extra-large) {
+            height: 600px;
+        }
     }
 }
 </style>

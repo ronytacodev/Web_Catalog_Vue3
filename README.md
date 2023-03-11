@@ -1,5 +1,7 @@
 # catalogo-vue
 
+Learn to design responsive use mixins of SASS.
+
 ## Project setup
 ```
 npm install

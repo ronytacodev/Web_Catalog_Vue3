@@ -14,3 +14,21 @@ $ff-3: 'Roboto', sans-serif;
 $color-1: #1F8A70;
 $color-2: #373a40;
 $color-3: #eeeeee;
+
+// breakpoints
+$small: '600px';
+$medium: '960px';
+$large: '1264px';
+$extra-large: '1904px';
+
+@mixin desde_hasta ($desde, $hasta) {
+    @media screen and (min-width: $desde) and (max-width: $hasta) {
+        @content;
+    }
+}
+
+@mixin desde ($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
