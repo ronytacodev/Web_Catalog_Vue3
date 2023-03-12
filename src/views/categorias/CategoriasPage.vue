@@ -6,7 +6,7 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell small-12 medium-2 large-3">
-                aqui va los filtros de categorias
+                <the-lista-categorias />
             </div>
 
             <div class="cell small-2 medium-10 large-9">
@@ -18,8 +18,13 @@
 </template>
 
 <script>
+import TheListaCategorias from '@/components/categorias/TheListaCategorias.vue'
+
 export default {
-    name: 'CategoriasPage'
+    name: 'CategoriasPage',
+    components: {
+        TheListaCategorias
+    }
 }
 </script>
 
