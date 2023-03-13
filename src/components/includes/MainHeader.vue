@@ -1,11 +1,16 @@
 <template>
     <div class="header">
+        <img class="header__img" src="@/assets/logo-web-ahorraya.png" alt="">
         <a href="#" class="header__logo">Ahorra Ya</a>
 
         <ul class="header__menu">
             <li class="header__menu__item">
-                <a href="#" class="header__menu__item__link">Inicio</a>
+                <!-- <a href="#" class="header__menu__item__link">Inicio</a> -->
+                <router-link :to="{ name: 'home' }" class="header__menu__item__link">Inicio</router-link>
             </li>
+            <!-- <li class="header__menu__item">
+                <router-link :to="{ name: '/' }" class="header__menu__item__link">Inicio</router-link>
+            </li> -->
 
             <li class="header__menu__item">
                 <a href="#" class="header__menu__item__link">Ubícanos</a>
@@ -59,6 +64,10 @@ export default {
         padding: 1em;
     }
 
+    &__img {
+        width: 80px;
+    }
+
     &__logo {
         color: $color-2;
         font-family: $ff-1;
@@ -68,6 +77,12 @@ export default {
         @include desde ($medium) {
             justify-content: space-between;
             font-size: 40px;
+            color: $color-3;
+            margin-left: 5px;
+            font-family: $ff-4;
+            padding: 0px 2px;
+            // box-shadow: 2px 5px $color-2;
+            border-radius: 2px;
         }
     }
 

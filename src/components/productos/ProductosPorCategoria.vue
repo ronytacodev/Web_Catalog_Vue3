@@ -29,7 +29,9 @@ export default {
     },
     methods: {
         filtrarProductos: function () {
-            let filtros = 'category=' + this.$route.params.category
+            // console.log(this.$route.query.colors)
+            let filtros = 'category=' + this.$route.params.category + '&?colors=' + this.$route.query.colors
+            console.log(filtros)
             apiProductos.filtrarProductos(filtros).then(
                 (response) => {
                     this.productos = response.data.results

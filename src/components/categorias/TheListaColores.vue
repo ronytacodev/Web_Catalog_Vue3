@@ -5,7 +5,7 @@
 
     <div class="cell">
         <li v-for="color in colores" :key="color.id" class="cell__item">
-            <a href="#" class="cell__item__link" :style="{ background: color.value }"></a>
+            <a :href="'?colors=' + color.id" class="cell__item__link" :style="{ background: color.value }"></a>
         </li>
     </div>
 </template>

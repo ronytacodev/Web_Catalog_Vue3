@@ -11,7 +11,7 @@ import BannerHome from '@/components/home/BannerHome.vue'
 export default {
   name: 'HomeView',
   components: {
-    BannerHome
+    BannerHome,
   }
 }
 </script>

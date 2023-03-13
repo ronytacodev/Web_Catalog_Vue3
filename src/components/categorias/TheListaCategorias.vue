@@ -5,11 +5,16 @@
 
     <div class="cell">
         <ul class="lista">
-            <li v-for="categoria in listarCategorias" :key="categoria.id" class="lista__item">
-                <router-link class="lista__item__link"
-                    :to="{ name: 'categorias', params: { 'category': categoria.name_unique } }">
+            <li v-for="categoria in listaCategorias" :key="categoria.id" class="lista__item">
+                <router-link class="lista__item__link" :to="'?category=' + categoria.name_unique">
                     {{ categoria.name }}
                 </router-link>
+                <!-- <a :href="'?category=' + categoria.name_unique" class="cell__item__link">
+                    {{ categoria.name }}
+                </a> -->
+                <!-- <li v-for="color in colores" :key="color.id" class="cell__item">
+                <a :href="'?colors=' + color.id" class="cell__item__link" :style="{ background: color.value }"></a>
+            </li> -->
             </li>
         </ul>
     </div>
@@ -22,7 +27,7 @@ export default {
     name: 'TheListaCategorias',
     data() {
         return {
-            listarCategorias: []
+            listaCategorias: []
         }
     },
     methods: {
@@ -30,7 +35,7 @@ export default {
             apiCategorias.listaCategorias().then(
                 (response) => {
                     // console.log(response.data)
-                    this.listarCategorias = response.data
+                    this.listaCategorias = response.data
                 }
             )
         }
@@ -51,7 +56,7 @@ export default {
         display: block;
 
         &__link {
-            border: 1px solid red;
+            border: 1px solid $color-1;
             display: block;
             padding: 10px;
             text-decoration: none;

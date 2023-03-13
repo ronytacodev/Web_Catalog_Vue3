@@ -22,24 +22,41 @@ const routes = [
     name: 'categorias',
     children: [
       {
-        path: '/:id',
-        name: 'detalle-producto',
-        component: ProductosDetailPage
+        path: ':category',
+        name: 'categorias',
+        component: ProductosPorCategoriaPage,
+        query:null,
       },
+      {
+        path:'/producto-detalle/:id',
+        name:'detalle-producto',
+        component: ProductosDetailPage
+      }
     ]
-    // children: [
-    //   {
-    //     path: '/:category',
-    //     name: 'categorias',
-    //     component: ProductosPorCategoriaPage
-    //   }
-    // ]
-  },
-  {
-    path: '/:category',
-    name: 'productos-categorias',
-    component: ProductosPorCategoriaPage
-  },
+  }
+
+  // {
+  //   path: '/category',
+  //   component: CategoriasPage,
+  //   name: 'categorias',
+  //   children: [
+  //     {
+
+  //       path: ':category',
+  //       name: 'categorias',
+  //       component: ProductosPorCategoriaPage,
+  //       query:null,
+
+  //     },
+  //     // {
+  //     //   path: ':category',
+  //     //   name: 'categorias',
+  //     //   component: ProductosPorCategoriaPage
+  //     // }
+  //   ]
+  // },
+
+
 ]
 
 const router = createRouter({
