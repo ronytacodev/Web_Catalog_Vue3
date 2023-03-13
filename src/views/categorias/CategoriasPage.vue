@@ -10,7 +10,7 @@
             </div>
 
             <div class="cell small-2 medium-10 large-9">
-                <p>aqui van los colores</p>
+                <p><the-lista-colores /></p>
                 aqui va el contenido
             </div>
         </div>
@@ -19,11 +19,13 @@
 
 <script>
 import TheListaCategorias from '@/components/categorias/TheListaCategorias.vue'
+import TheListaColores from '@/components/categorias/TheListaColores.vue';
 
 export default {
     name: 'CategoriasPage',
     components: {
-        TheListaCategorias
+        TheListaCategorias,
+        TheListaColores
     }
 }
 </script>
