@@ -1,7 +1,7 @@
 <template>
     <!-- IMPORT CDN FOUNDATION  -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
-        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
+        crossorigin="anonymous">
 
     <div class="grid">
         <producto-detail />

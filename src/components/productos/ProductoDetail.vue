@@ -1,29 +1,29 @@
 <template>
     <div class="producto__content">
-        <div class="producto__content__cell">
-            <img class="producto__content__cell__img" src="@/assets/background.jpg">
-            <div class="producto__content__cell__imgs">
-                <img class="producto__content__cell__imgs__item" src="@/assets/background.jpg">
-                <img class="producto__content__cell__imgs__item" src="@/assets/background.jpg">
+        <div class="producto__content__div">
+            <img class="producto__content__div__img" src="@/assets/background.jpg">
+            <div class="producto__content__div__imgs">
+                <img class="producto__content__div__imgs__item" src="@/assets/background.jpg">
+                <img class="producto__content__div__imgs__item" src="@/assets/background.jpg">
             </div>
         </div>
 
-        <div class="producto__content__cell">
-            <h3 class="producto__content__cell__title">Titulo de producto</h3>
-            <p class="producto__content__cell__categorias">
-                <span class="producto__content__cell__categorias__categoria">categoria ejemplo</span>
+        <div class="producto__content__div">
+            <h3 class="producto__content__div__title">Titulo de producto</h3>
+            <p class="producto__content__div__categorias">
+                <span class="producto__content__div__categorias__categoria">categoria ejemplo</span>
             </p>
 
-            <p class="producto__content__cell__colores">
+            <p class="producto__content__div__colores">
                 <span class="producto__content__cell__colores__color">C</span>
             </p>
 
-            <p class="producto__content__cell__price">
+            <p class="producto__content__div__price">
                 $ 300
             </p>
 
-            <div class="producto__content__cell__description">
-                <p class="producto__content__cell__description__text">
+            <div class="producto__content__div__description">
+                <p class="producto__content__div__description__text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt laboriosam ullam tempore sequi
                     est dolor delectus eius nam et nostrum quam ea ipsam impedit neque, libero, rem enim consectetur
                     sapiente.
@@ -34,9 +34,27 @@
 </template>
 
 <script>
+import apiProductos from '@/api/productos'
 
 export default {
-    name: 'ProductoDetail'
+    name: 'ProductoDetail',
+    data() {
+        return {
+            producto: null
+        }
+    },
+    methods: {
+        recuperarProducto: function () {
+            apiProductos.recuperarProducto(this.$route.params.id).then(
+                (response) => {
+                    this.producto = response.data
+                }
+            )
+        }
+    },
+    beforeMount() {
+        this.recuperarProducto()
+    }
 }
 </script>
 
@@ -52,7 +70,7 @@ export default {
         width: 100%;
     }
 
-    &__cell {
+    &__div {
         padding: 1px;
 
         @include desde ($small) {
