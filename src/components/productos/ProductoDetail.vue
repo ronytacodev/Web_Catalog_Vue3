@@ -1,32 +1,33 @@
 <template>
-    <div class="producto__content">
+    <div v-if="producto" class="producto__content">
         <div class="producto__content__div">
-            <img class="producto__content__div__img" src="@/assets/background.jpg">
+            <img class="producto__content__div__img" :src="producto.main__image">
             <div class="producto__content__div__imgs">
-                <img class="producto__content__div__imgs__item" src="@/assets/background.jpg">
-                <img class="producto__content__div__imgs__item" src="@/assets/background.jpg">
+                <img class="producto__content__div__imgs__item" :src="producto.second__image">
+                <img class="producto__content__div__imgs__item" :src="producto.third__image">
             </div>
         </div>
 
         <div class="producto__content__div">
-            <h3 class="producto__content__div__title">Titulo de producto</h3>
+            <h3 class="producto__content__div__title">{{ producto.name }}</h3>
             <p class="producto__content__div__categorias">
-                <span class="producto__content__div__categorias__categoria">categoria ejemplo</span>
+                <span class="producto__content__div__categorias__categoria" v-for="categoria in producto.category"
+                    :key="categoria.id">
+                    {{ categoria.name }}
+                </span>
             </p>
 
             <p class="producto__content__div__colores">
-                <span class="producto__content__cell__colores__color">C</span>
+                <span class="producto__content__cell__colores__color" v-for="color in producto.colors" :key="color.id"
+                    :style="{ background: color.value }"></span>
             </p>
 
             <p class="producto__content__div__price">
-                $ 300
+                $ {{ producto.price }}
             </p>
 
             <div class="producto__content__div__description">
-                <p class="producto__content__div__description__text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt laboriosam ullam tempore sequi
-                    est dolor delectus eius nam et nostrum quam ea ipsam impedit neque, libero, rem enim consectetur
-                    sapiente.
+                <p class="producto__content__div__description__text" v-html="producto.description">
                 </p>
             </div>
         </div>
