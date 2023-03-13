@@ -21,7 +21,7 @@
             </li>
 
             <li class="header__menu__item">
-                <a class="header__menu__item__link" href="">Categorías</a>
+                <router-link class="header__menu__item__link" :to="{ name: 'categorias' }">Categorías</router-link>
             </li>
 
             <li class="header__menu__item">

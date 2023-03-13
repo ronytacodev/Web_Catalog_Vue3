@@ -11,7 +11,7 @@
 
 <script>
 
-import apiProductos from '@/api/Productos'
+import apiProductos from '@/api/productos'
 
 import VCardProducto from '@/components/base/VCardProducto.vue';
 

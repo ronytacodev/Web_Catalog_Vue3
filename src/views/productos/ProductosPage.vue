@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ProductosPopulares from './ProductosPopulares.vue';
+import ProductosPopulares from '@/components/productos/ProductosPopulares.vue';
 
 export default {
     name: 'ProductosPage',

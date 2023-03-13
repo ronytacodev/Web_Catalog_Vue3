@@ -11,7 +11,7 @@
 
             <div class="cell small-2 medium-10 large-9">
                 <p><the-lista-colores /></p>
-                aqui va el contenido
+                <router-view />
             </div>
         </div>
     </div>
