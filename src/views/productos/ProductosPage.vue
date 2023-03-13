@@ -32,7 +32,7 @@ export default {
     }
 
     &__grid {
-        border: 1px solid red;
+        // border: 1px solid red;
         display: grid;
         grid-template-columns: auto auto;
         gap: 5px;

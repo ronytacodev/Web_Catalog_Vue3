@@ -38,13 +38,25 @@ export default {
         margin-bottom: 5px;
         height: 150px;
         border-bottom: 2px solid $color-1;
+        // border: 1px solid red;
+
+        @include desde ($small) {
+            // object-fit: cover;
+            width: 150px;
+            margin-bottom: 15px;
+        }
     }
 
     &__content {
         height: 46%;
 
         &__link {
-            height: 70px;
+            height: 55px;
+            // border: 1px solid red;
+
+            @include desde ($small) {
+                height: 40%;
+            }
 
             &__name {
                 font-family: $ff-2;
@@ -57,6 +69,12 @@ export default {
                 font-weight: bold;
                 text-transform: capitalize;
                 height: 100%;
+                // border: 1px solid red;
+
+                @include desde ($small) {
+                    height: 70%;
+
+                }
             }
         }
 
@@ -66,6 +84,12 @@ export default {
             font-weight: bold;
             margin-bottom: 10px;
             color: $color-2;
+
+            // border: 1px solid red;
+
+            @include desde ($small) {
+                height: 70%;
+            }
         }
     }
 
