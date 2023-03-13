@@ -1,11 +1,19 @@
-# catalogo-vue
+# WEB "AHORRA YA" :dollar: :credit_card:
+
+Code for make to build Shopping Website, consume REST API **Neunapp**
+
 
 Learn to design responsive use mixins of SASS.
+
+## Screenshot 
+
+![](src/assets/web.jpg)
 
 ## Project setup
 ```
 npm install
 ```
+![](src/assets//logo.png)
 
 ### Compiles and hot-reloads for development
 ```
