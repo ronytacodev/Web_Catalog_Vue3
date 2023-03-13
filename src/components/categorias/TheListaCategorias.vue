@@ -6,7 +6,10 @@
     <div class="cell">
         <ul class="lista">
             <li v-for="categoria in listaCategorias" :key="categoria.id" class="lista__item">
-                <a class="lista__item__link" href="#">{{ categoria.name }}</a>
+                <router-link class="lista__item__link"
+                    :to="{ name: 'categorias', params: { 'category': categoria.name_unique } }">
+                    {{ categoria.name }}
+                </router-link>
             </li>
         </ul>
     </div>
