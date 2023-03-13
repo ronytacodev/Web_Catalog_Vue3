@@ -3,7 +3,7 @@
 Code for make to build Shopping Website, consume REST API **Neunapp**
 
 
-Learn to design responsive use mixins of SASS.
+Learn to design responsive use mixins of SASS apply MOBILE FIRST.
 
 ## STACK TECH :hammer:
 
