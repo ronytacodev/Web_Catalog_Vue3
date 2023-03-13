@@ -4,16 +4,16 @@
 
         <ul class="header__menu">
             <li class="header__menu__item">
-                <router-link :to="{ name: 'productos' }" class="header__menu__item__link">Inicio</router-link>
+                <a href="#" class="header__menu__item__link">Inicio</a>
             </li>
 
             <li class="header__menu__item">
-                <router-link :to="{ name: 'productos' }" class="header__menu__item__link">Ubícanos</router-link>
+                <a href="#" class="header__menu__item__link">Ubícanos</a>
             </li>
 
             <li class="header__menu__item">
-                <router-link :to="{ name: 'productos' }" class="header__menu__item__link">¿Cómo ofrecer mi
-                    local?</router-link>
+                <a href="#" class="header__menu__item__link">¿Cómo ofrecer mi
+                    local?</a>
             </li>
 
             <li class="header__menu__item">
@@ -21,7 +21,7 @@
             </li>
 
             <li class="header__menu__item">
-                <router-link class="header__menu__item__link" :to="{ name: 'categorias', params: { 'category': '' } }">
+                <router-link :to="{ name: 'categorias', params: { 'category': ' ' } }" class="header__menu__item__link">
                     Categorías
                 </router-link>
             </li>

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import ProductosPage from '@/views/productos/ProductosPage.vue'
 import CategoriasPage from '@/views/categorias/CategoriasPage.vue'
 import ProductosPorCategoriaPage from '@/views/productos/ProductosPorCategoriaPage.vue'
+import ProductosDetailPage from '@/views/productos/ProductosDetailPage.vue'
 
 const routes = [
   {
@@ -18,14 +19,27 @@ const routes = [
   {
     path: '/categorias',
     component: CategoriasPage,
+    name: 'categorias',
     children: [
       {
-        path: '/:category',
-        name: 'categorias',
-        component: ProductosPorCategoriaPage
-      }
+        path: '/:id',
+        name: 'detalle-producto',
+        component: ProductosDetailPage
+      },
     ]
-  }
+    // children: [
+    //   {
+    //     path: '/:category',
+    //     name: 'categorias',
+    //     component: ProductosPorCategoriaPage
+    //   }
+    // ]
+  },
+  {
+    path: '/:category',
+    name: 'productos-categorias',
+    component: ProductosPorCategoriaPage
+  },
 ]
 
 const router = createRouter({

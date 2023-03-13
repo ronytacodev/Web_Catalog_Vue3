@@ -3,7 +3,7 @@
         <img class="producto__img" :src="image">
         <div class="producto__content">
             <div class="producto__content__link">
-                <a class="producto__content__link__name" href="">{{ name }}</a>
+                <router-link :to="ruta" class="producto__content__link__name">{{ name }}</router-link>
             </div>
             <div>
                 <p class="producto__content__price">$ {{ price }}</p>
@@ -19,7 +19,8 @@ export default {
     props: {
         image: String,
         name: String,
-        price: Number
+        price: Number,
+        ruta: Object
     }
 }
 </script>

@@ -1,10 +1,8 @@
 <template>
-    <!-- IMPORT CDN FOUNDATION  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
-        crossorigin="anonymous">
-    <div class="cell grid-x grid-margin-x">
-        <div class="cell small-6 medium-4 large-3" v-for="producto in productos" :key="producto.id">
-            <v-card-producto :image="producto.main_image" :name="producto.name" :price="parseFloat(producto.price)" />
+    <div class="cell">
+        <div class="cell" v-for=" producto in productos" :key="producto.id">
+            <v-card-producto :image="producto.main_image" :name="producto.name" :price="parseFloat(producto.price)"
+                :ruta="{ name: 'detalle-producto', params: { id: producto.id } }" />
         </div>
     </div>
 </template>

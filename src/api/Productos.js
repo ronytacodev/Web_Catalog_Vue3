@@ -11,4 +11,3 @@ const apiProductos = {
 
 export default apiProductos
 
-// me quede en el min 9:45 falta revisar errores en consola

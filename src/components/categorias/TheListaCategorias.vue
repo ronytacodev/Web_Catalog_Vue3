@@ -5,7 +5,7 @@
 
     <div class="cell">
         <ul class="lista">
-            <li v-for="categoria in listaCategorias" :key="categoria.id" class="lista__item">
+            <li v-for="categoria in listarCategorias" :key="categoria.id" class="lista__item">
                 <router-link class="lista__item__link"
                     :to="{ name: 'categorias', params: { 'category': categoria.name_unique } }">
                     {{ categoria.name }}
@@ -22,7 +22,7 @@ export default {
     name: 'TheListaCategorias',
     data() {
         return {
-            listaCategorias: []
+            listarCategorias: []
         }
     },
     methods: {
@@ -30,7 +30,7 @@ export default {
             apiCategorias.listaCategorias().then(
                 (response) => {
                     // console.log(response.data)
-                    this.listaCategorias = response.data
+                    this.listarCategorias = response.data
                 }
             )
         }
